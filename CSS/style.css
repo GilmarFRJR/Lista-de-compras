@@ -175,17 +175,17 @@ button{
 
 
     .item{
-        width: 95%;
+        width: 90%;
         font-size: 20px;
 
-        padding: 0 70px 4px 35px;
+        padding: 10px 70px 10px 35px;
     }
 
 
     .iconLista{
         position: absolute;
         left: 0px;
-        top: -5px;
+        top: 5px;
     }
 
 
