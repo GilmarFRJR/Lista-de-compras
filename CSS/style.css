@@ -1,22 +1,229 @@
-html{
-    font-size: 62,5%;
-}
-
-body{
-    font-size: 1.6rem;
-}
-
 *{
     padding: 0;
     margin: 0;
-    list-style: none;
     text-decoration: none;
     box-sizing: border-box;
     word-wrap: break-word;
-    word-break: break-all;
+    cursor: default;
 }
 
 
 body{
     background-color: rgb(29, 197, 127);
+
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
 }
+
+
+#container{
+    background-color: whitesmoke;
+    width: 400px;
+    height: 500px;
+    overflow-y: auto;
+
+    border: rgb(17, 17, 17) solid 8px;
+    border-radius: 20px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* top: 40px; */
+    transform: translate(-50%, -50%);
+    padding: 30px 15px 130px 15px;
+}
+
+
+#titulo{
+    font-size: 30px;
+    text-align: center;
+    margin: 0 12px 0 12px;
+}
+
+
+#containerLista{
+    min-height: 230px;
+
+    margin-top: 30px;
+    position: relative;
+}
+
+
+.iconLista{
+    position: absolute;
+    left: 0px;
+    top: 7px;
+}
+
+
+.iconLista img{
+    width: 40px;
+}
+
+
+.item{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px 90px 15px 35px;
+
+    position: relative;
+
+    transition: 0.5s;
+    border-radius: 8px;
+}
+
+
+.primeiraLetraItem::first-letter{
+    text-transform: capitalize;
+}
+
+
+.item:hover{
+    transform: scale(1.010);
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.363);
+}
+
+
+.apagarItem{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.marcarComoComprado{
+    position: absolute;
+    right: 42px;
+    top: 50%;
+    transform: translateY(-40%);
+
+}
+
+
+.textoRiscado{
+    text-decoration: line-through;
+}
+
+
+.marcarComoComprado img{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+input{
+    width: 90%;
+    height: 40px;
+
+    border: black 3px solid;
+    border-radius: 10px;
+    padding-left: 8px;
+   
+    position: absolute;
+    bottom:-80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+button{
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+
+    background-color: gainsboro;
+    border: black solid 3px;
+    border-radius: 5px;
+
+    position: absolute;
+    bottom:-140px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+@media screen and (max-width: 434px){
+    #container{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    #container{
+        padding: 30px 0 160px 0;
+    }
+
+
+    #titulo{
+        font-size: 25px;
+    }
+
+
+    .item{
+        width: 95%;
+        font-size: 20px;
+
+        padding: 0 70px 4px 35px;
+    }
+
+
+    .iconLista{
+        position: absolute;
+        left: 0px;
+        top: -5px;
+    }
+
+
+    .apagarItem{
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .marcarComoComprado{
+        right: 34px;
+    }
+
+
+    .marcarComoComprado img{
+        width: 25px;
+    }
+
+
+    input::placeholder{
+        font-size: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 295px){
+    #containerLista{
+        min-height: 200px;
+    }
+}
+
+
+@media screen and (max-width: 275px){
+    button{
+        width: 80%;
+    }
+}
+
+
